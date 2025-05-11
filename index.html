@@ -1,9 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReaderLet Bookmarklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-    </head>
-    <body>
-        <p> <a href=:'http://localhost:8000/Bookmarklet.js'>hello</a></p>
-    </body>
-</html> 
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .bookmarklet {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #0078d7;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+        }
+
+        .bookmarklet:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ReaderLet Bookmarklet</h1>
+        <p>
+            Enhance your reading experience with the ReaderLet bookmarklet! This tool allows you to customize the appearance of any webpage with ease. Adjust fonts, text colors, and background colors to suit your preferences.
+        </p>
+        <p>
+            Features include:
+            <ul>
+                <li>Font selection from popular options like Arial, Verdana, and Times New Roman.</li>
+                <li>Text color customization using a color picker.</li>
+                <li>Background color customization for better readability.</li>
+                <li>Easy-to-use interface with Apply and Close buttons.</li>
+            </ul>
+        </p>
+        <p>
+            Drag the button below to your bookmarks bar to get started:
+        </p>
+        <a href="javascript:(function()%7Bvar panel=document.createElement('div');panel.style.position='fixed';panel.style.top='10px';panel.style.right='10px';panel.style.width='300px';panel.style.padding='15px';panel.style.background='%23fff';panel.style.borderRadius='8px';panel.style.boxShadow='0 4px 8px rgba(0,0,0,0.2)';panel.style.zIndex='10000';panel.innerHTML='<h3 style=%5C'margin:0 0 10px;font-family:Arial,sans-serif;%5C'>Customize Page</h3><label>Font: <select id=%5C'fontSelect%5C'><option>Arial</option><option>Verdana</option><option>Times New Roman</option></select></label><br><label>Text Color: <input type=%5C'color%5C' id=%5C'textColor%5C'></label><br><label>Background Color: <input type=%5C'color%5C' id=%5C'bgColor%5C'></label><br><button id=%5C'applyBtn%5C' style=%5C'margin-top:10px;padding:5px 10px;background:%230078d7;color:%23fff;border:none;border-radius:4px;cursor:pointer;%5C'>Apply</button><button id=%5C'closeBtn%5C' style=%5C'margin-top:10px;padding:5px 10px;background:%23d9534f;color:%23fff;border:none;border-radius:4px;cursor:pointer;margin-left:10px;%5C'>Close</button>';document.body.appendChild(panel);document.getElementById('applyBtn').onclick=function()%7Bvar font=document.getElementById('fontSelect').value;textColor=document.getElementById('textColor').value;bgColor=document.getElementById('bgColor').value;document.body.style.fontFamily=font;document.body.style.color=textColor;document.body.style.backgroundColor=bgColor;%7D;document.getElementById('closeBtn').onclick=function()%7Bdocument.body.removeChild(panel);%7D;%7D)();" class="bookmarklet">ReaderLet</a>
+    </div>
+</body>
+</html>
